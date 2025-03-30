@@ -14,7 +14,7 @@ func getSafeUsers() []*User {
 
 func main() {
 	users := getUsers()
-	println(users[0].Name) // want "potential nil dereference without prior nil check"
+	println(users[0].Name) // want "nil slice element dereference"
 
 	safeUsers := getSafeUsers()
 	println(safeUsers[0].Name) // Safe

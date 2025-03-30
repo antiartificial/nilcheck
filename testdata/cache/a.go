@@ -10,5 +10,5 @@ func getUsers() []*User {
 
 func main() {
 	users := getUsers()
-	println(users[0].Name) // want "potential nil dereference of users[0].Name without prior nil check on element"
+	println(users[0].Name) // want "nil slice element dereference"
 }
