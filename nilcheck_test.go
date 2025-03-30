@@ -24,7 +24,7 @@ func TestNilCheckAnalyzer(t *testing.T) {
 	}{
 		{"BasicNilDeref", []string{"./basic"}},
 		// Skip problematic tests for now
-		// {"SliceOfPointers", []string{"./slice"}}, // Disabled - needs more pattern matching work
+		// {"SliceOfPointers", []string{"./slice"}}, // Regex pattern matching issues
 		// {"Caching", []string{"./cache"}}, // Disabled - same issue as SliceOfPointers
 		{"MultiPackage", []string{"./multi/mypkg"}}, // Only testing library part to avoid import issues
 		{"ChainedCalls", []string{"./chained"}},
