@@ -24,7 +24,7 @@ func TestNilCheckAnalyzer(t *testing.T) {
 	}{
 		{"BasicNilDeref", []string{"./basic"}},
 		// Skip problematic tests for now
-		// {"SliceOfPointers", []string{"./slice"}}, // Needs more work
+		// {"SliceOfPointers", []string{"./slice"}}, // Disabled - needs more pattern matching work
 		// {"Caching", []string{"./cache"}},
 		// {"MultiPackage", []string{"./multi/mypkg", "./multi/main"}},
 		{"ChainedCalls", []string{"./chained"}},
