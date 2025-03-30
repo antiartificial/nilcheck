@@ -1,6 +1,6 @@
 package main
 
-import "testdata/multi/mypkg"
+import "mypkg"
 
 func main() {
 	users := mypkg.GetUsers()
