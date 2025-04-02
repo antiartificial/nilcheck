@@ -639,7 +639,7 @@ func isNilSafe(pass *analysis.Pass, fn *ast.FuncDecl) bool {
 			if cond, ok := ifStmt.Cond.(*ast.BinaryExpr); ok {
 				if (cond.Op.String() == "!=" || cond.Op.String() == "==") && isNil(pass, cond.Y) {
 					if ident, ok := cond.X.(*ast.Ident); ok {
-						if fn.Recv != nil && len(fn.Recv.List) > 0 && ident.Name == fn.Recv.List[0].Names[0].Name {
+						if fn.Recv != nil && len(fn.Recv.List) > 0 && len(fn.Recv.List[0].Names) > 0 && ident.Name == fn.Recv.List[0].Names[0].Name {
 							hasNilCheck = true
 							return false
 						}
